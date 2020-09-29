@@ -18,9 +18,17 @@
 	
 	# Ecrire ici le menu du site de toutes pages HTML
 	require_once(CHEMIN_VUES . 'menu.php');
+
+
+
     function GenesisController(){
 		require_once('controllers/GeneseController.php');	
 		$controller = new GeneseController();
+	}
+
+	function LivreController(){
+		require_once('controllers/LivresController.php');	
+		$controller = new LivresController();
 	}
 	
 
@@ -32,8 +40,7 @@
 			GenesisController();
 			break;
 		case 'livres':
-			require_once('controllers/LivresController.php');	
-			$controller = new LivresController();
+			LivreController();
 			break;
 		case 'contact':
 			require_once('controllers/ContactController.php');	
